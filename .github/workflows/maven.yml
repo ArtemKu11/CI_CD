@@ -38,6 +38,12 @@ jobs:
       run: | 
         npm ci
         npm run build --if-present
+    - name: Copy to backend
+      run: |
+        mkdir springApp/src/main/resources/static
+        mkdir springApp/src/main/resources/templates
+        cp -r spring_app_frontend/dist/* springApp/src/main/resources/static/
+        mv springApp/src/main/resources/static/index.html springApp/src/main/resources/templates
 
     # BACKEND
     - name: Set up JDK 11
