@@ -28,11 +28,11 @@ jobs:
         distribution: 'temurin'
     - name: chmod
       run: |
-      ls
-      pwd
-      ls springApp
-      cd springApp
-      ls
+        ls
+        pwd
+        ls springApp
+        cd springApp
+        ls
     - name: Build with Maven
       run: mvn -B package --file springApp/pom.xml
 
