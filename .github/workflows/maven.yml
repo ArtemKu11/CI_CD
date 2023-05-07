@@ -33,7 +33,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: spring_app_frontend/package-lock.json
-    - name: Install dependesies and build 
+    - name: Install dependecies and build 
       working-directory: ./spring_app_frontend
       run: | 
         npm ci
