@@ -1,0 +1,104 @@
+.table-container {
+    width: 70%;
+    // height: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media (max-width: $firstWidth) {
+        width: 100%;
+    }
+
+    .table {
+        border-color: orange;
+        table-layout: fixed;
+        font-size: $defaultFontSize;
+        margin: 0;
+
+        tr {
+            &:not(.table-header) {
+                cursor: pointer;
+            }
+
+            th,
+            td {
+                overflow: hidden;
+                white-space: nowrap;
+                // text-overflow: ellipsis;
+
+                &:not(.id_row) {
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &:hover {
+                &:not(.table-header) {
+                    background: rgba(255, 229, 196, 0.9);
+                }
+            }
+
+
+
+        }
+
+
+        #col-1 {
+            width: 5%;
+        }
+
+        #col-2 {
+            width: 30%;
+        }
+
+        #col-5 {
+            width: 10%;
+        }
+
+        @media (max-width: $firstWidth) {
+            font-size: $smallerFontSize;
+
+            #col-3,
+            #col-4 {
+                display: none;
+            }
+
+            .upload-date_header,
+            .change-date_header,
+            .upload-date_row,
+            .change-date_row {
+                display: none;
+            }
+
+
+            tr {
+                grid-template-columns: auto 1fr auto 1fr 1fr;
+                ;
+            }
+
+            #col-1 {
+                width: 10%;
+            }
+
+            #col-2 {
+                width: 40%;
+            }
+
+            // #col-5 {
+            //     width: 25%;
+            // }
+
+
+            #col-6 {
+                width: 30%;
+            }
+        }
+
+        @media (max-width: $secondWidth) {
+            font-size: $smallFontSize; 
+            #col-5 {
+                width: 20%;
+            }
+        }
+    }
+}
