@@ -26,10 +26,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Build with Maven
-      run: ls
-    - name: Build with Maven
-      run: pwd
+    - name: chmod
+      run: chmod 777 springApp/pom.xml.
     - name: Build with Maven
       run: mvn -B package --file springApp/pom.xml
 
