@@ -53,4 +53,5 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Hello World!
+    - name: Hell World!
+      run: echo "Hello World!"
